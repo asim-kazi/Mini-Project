@@ -1,0 +1,239 @@
+        /* Light green theme */
+        :root {
+            --light-green: #e0f7fa; /* Light green background */
+            --primary-green: #4caf50; /* Primary green for buttons and headers */
+            --dark-green: #388e3c; /* Dark green for hover effects */
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-image: url('Bg_1.jpg'); /* Add your background image */
+            background-size: cover; /* Ensure the image covers the entire viewport */
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat;
+            position: relative;
+        }
+
+        /* Overlay for better readability */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(224, 247, 250, 0.265); /* Light green overlay with transparency */
+            z-index: -1;
+        }
+
+        header {
+            background-color: var(--primary-green); /* Use primary green for header */
+            color: white;
+            padding: 20px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1rem;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 800px;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background for content */
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        section h2 {
+            color: var(--primary-green); /* Use primary green for headings */
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        section p {
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .open-btn {
+            background-color: var(--primary-green); /* Use primary green for button */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .open-btn:hover {
+            background-color: var(--dark-green); /* Dark green for hover effect */
+        }
+
+        .popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: flex-start; /* Changed from center to flex-start */
+    padding-top: 20px; /* Add some top padding */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 90%; 
+    position: relative;
+    margin-bottom: 20px; /* Space at bottom when scrolling */
+    max-height: 90vh; /* Prevent form from taking full viewport height */
+    overflow-y: auto; /* Enable scrolling within form */
+}
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #ff5c5c;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            padding: 5px 10px;
+        }
+
+        .close-btn:hover {
+            background-color: #ff1c1c;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .form-group input {
+            width: 250px;
+			padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+
+		}
+        .form-group select {
+            width: 90;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .form-group input[type="radio"] {
+            width: auto;
+            margin-right: 10px;
+        }
+
+        .form-group .radio-group {
+            display: flex;
+            align-items: center;
+        }
+
+        .form-group .radio-group label {
+            margin-right: 20px;
+        }
+
+        .btn {
+            background-color: var(--primary-green); /* Use primary green for button */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            width: 100%;
+        }
+
+        .btn:hover {
+            background-color: var(--dark-green); /* Dark green for hover effect */
+        }
+
+        .sign-in-link {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .sign-in-link a {
+            color: var(--primary-green); /* Use primary green for links */
+            text-decoration: none;
+        }
+
+        .sign-in-link a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Footer Styling */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        footer p {
+            font-size: 1rem; /* Set font size for the text */
+            margin: 0; /* Remove any default margin */
+        }
+
+        /* Adding responsiveness for small screens */
+        @media (max-width: 768px) {
+            footer {
+                padding: 15px; /* Reduce padding on smaller screens */
+            }
+
+            footer p {
+                font-size: 0.9rem; /* Adjust font size on small screens */
+            }
+        }

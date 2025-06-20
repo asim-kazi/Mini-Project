@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dairy Farmers Registration</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="animate__animated animate__bounceInLeft">
+      <h1>Dairy Farmers Registration</h1>
+      <nav>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact Us</a>
+        <a href="sign_in.html">Sign In</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="about" class="animate__animated animate__fadeIn">
+        <h2>About Our Program</h2>
+        <p>
+          Welcome to our Dairy Farmers Registration platform. We are dedicated
+          to supporting dairy farmers by providing a streamlined system for
+          registering farms and managing livestock products. Our mission is to
+          empower dairy farmers by enhancing productivity, ensuring product
+          quality, and facilitating market access.
+        </p>
+        <h3>Our Mission</h3>
+        <p>
+          We aim to empower dairy farmers with the tools and resources they need
+          to thrive. Our streamlined system helps farmers register their farms
+          efficiently, manage livestock products, and access markets with ease.
+          We believe in the importance of maintaining high standards of
+          productivity and product quality to ensure the success of our farmers.
+        </p>
+        <h3>Features</h3>
+        <ul>
+          <li>
+            <b>Efficient Registration:</b> Our simplified registration process
+            formalizes operations and helps farmers access numerous benefits.
+          </li>
+          <li>
+            <b>Product Management:</b> We offer tools for managing milk
+            production and livestock inventory efficiently, helping farmers stay
+            organized and productive.
+          </li>
+          <li>
+            <b>Quality Control:</b> Regular testing and certification ensure
+            that products meet high standards of quality and safety.
+          </li>
+          <li>
+            <b>Financial Transparency:</b> Our transparent financial tools help
+            farmers track payments and incentives, ensuring they get fair
+            compensation for their products.
+          </li>
+        </ul>
+        <h3>Support</h3>
+        <ul>
+          <li>
+            <b>Education and Training:</b> We provide resources to help farmers
+            improve their practices and stay updated with industry trends.
+          </li>
+          <li>
+            <b>Technical Assistance:</b> Our dedicated support team is always
+            available to offer prompt assistance with using our platform and
+            addressing any issues that may arise.
+          </li>
+        </ul>
+        <h3>Sustainability</h3>
+        <p>
+          We are committed to promoting sustainable farming practices and
+          environmental stewardship. Our platform encourages farmers to adopt
+          eco-friendly methods that ensure long-term sustainability for the
+          industry.
+        </p>
+        <h3>Join Us</h3>
+        <p>
+          Join us in revolutionizing dairy farming by adopting our platform for
+          sustainable growth and enhanced efficiency. Together, we can build a
+          future where dairy farming is more productive, profitable, and
+          sustainable.
+        </p>
+      </section>
+
+      <section id="contact" class="animate__animated animate__fadeIn">
+        <h2>Contact Us</h2>
+        <p>
+          Have questions or need assistance? Contact us at
+          <a href="mailto:asimkazi8010@gmail.com">asimkazi8010@gmail.com</a> or
+          call us at 9623577806.
+        </p>
+      </section>
+    </main>
+
+    <button class="open-btn" onclick="openPopup()">
+      Open Registration Form
+    </button>
+
+    <div class="popup" id="popup">
+      <div class="popup-content">
+        <button class="close-btn" onclick="closePopup()">Close</button>
+        <h1>Online Registration</h1>
+        <p>
+          Processing of dairy farmers producing milk and other livestock
+          products
+        </p>
+        <form
+          action="register.php"
+          method="POST"
+          onsubmit="return validateForm()"
+        >
+          <div class="form-group">
+            <label for="full-name">Full Name</label>
+            <input
+              placeholder="Enter Your Name"
+              type="text"
+              id="full-name"
+              name="full-name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="position">Position you are applying for</label>
+            <select
+              id="position"
+              name="position"
+              required
+              onchange="updateOptions()"
+            >
+              <option value="">-- Please select --</option>
+              <option value="farmer">Farmer</option>
+              <option value="manager">Manager</option>
+            </select>
+          </div>
+          <div class="form-group" id="additional-options" style="display: none">
+            <fieldset>
+              <legend>Specialization (select all that apply)</legend>
+              <div class="checkbox-group">
+                <div>
+                  <label
+                    ><input
+                      type="checkbox"
+                      id="milk"
+                      name="specialization"
+                      value="milk"
+                    />
+                    Milk</label
+                  >
+                </div>
+                <div>
+                  <label
+                    ><input
+                      type="checkbox"
+                      id="wool"
+                      name="specialization"
+                      value="wool"
+                    />
+                    Wool</label
+                  >
+                </div>
+                <div>
+                  <label
+                    ><input
+                      type="checkbox"
+                      id="egg"
+                      name="specialization"
+                      value="egg"
+                    />
+                    Egg</label
+                  >
+                </div>
+              </div>
+            </fieldset>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              placeholder="Enter Your Email"
+              type="email"
+              id="email"
+              name="email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="phone-number">Phone number</label>
+            <input
+              placeholder="Enter Your Number"
+              type="tel"
+              id="phone-number"
+              name="phone-number"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="country">Country</label>
+            <input
+              placeholder="Enter Your Country"
+              type="text"
+              id="country"
+              name="country"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="city">City</label>
+            <input
+              placeholder="Enter Your City"
+              type="text"
+              id="city"
+              name="city"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required />
+          </div>
+          <div class="form-group">
+            <label for="confirm-password">Confirm password</label>
+            <input
+              type="password"
+              id="confirm-password"
+              name="confirm-password"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label>Gender</label>
+            <div class="radio-group">
+              <label
+                ><input type="radio" name="gender" value="male" required />
+                Male</label
+              >
+              <label
+                ><input type="radio" name="gender" value="female" required />
+                Female</label
+              >
+              <label
+                ><input type="radio" name="gender" value="other" required />
+                Other</label
+              >
+            </div>
+          </div>
+          <button type="submit" class="btn">Submit</button>
+        </form>
+        <div class="sign-in-link">
+          Already have an account? <a href="sign_in.html">Sign in</a>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2025 All Rights Reserved To C.A.M</p>
+    </footer>
+
+    <script>
+      // Modified JavaScript to handle scrolling
+      function openPopup() {
+        document.getElementById('popup').style.display = 'flex';
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+      }
+
+      function closePopup() {
+        document.getElementById('popup').style.display = 'none';
+        document.body.style.overflow = 'auto'; // Restore background scrolling
+      }
+
+      function updateOptions() {
+        var position = document.getElementById('position').value;
+        var additionalOptions = document.getElementById('additional-options');
+
+        if (position === 'farmer') {
+          additionalOptions.style.display = 'block';
+        } else {
+          additionalOptions.style.display = 'none';
+        }
+      }
+
+      function validateForm() {
+        var password = document.getElementById('password').value;
+        var confirmPassword = document.getElementById('confirm-password').value;
+
+        if (password !== confirmPassword) {
+          alert('Passwords do not match.');
+          return false;
+        }
+        return true;
+      }
+    </script>
+  </body>
+</html>
