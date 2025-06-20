@@ -25,13 +25,13 @@ The **Dairy Management System** is a web-based platform designed to streamline t
 
 ## 🖼️ Project Screenshots
 ### 📌 Login Page
-![Login Page](templates/Login_Page.png)
+![Login Page](Templates/Login_Page.png)
 
 ### 📌 Registration Page
-![Registration Page](templates/Registeration_Page.png)
+![Registration Page](Templates/Registeration_Page.png)
 
 ### 📌 Dashboard View
-![Dashboard](templates/Dashboard_Page.png)
+![Dashboard](Templates/Dashboard_Page.png)
 
 ## 🛠 Tools & Technologies Used
 | 🏗 Technology  | 📝 Description |
